@@ -31,6 +31,9 @@
 \newcommand{\engl}{engl.\xspace}
 \newcommand{\dt}{dt.\xspace}
 
+\setitemize{leftmargin=*}
+\setenumerate{leftmargin=*}
+
 % Befehle zu Fachbegriffen --------------------------------------------------------------
 % Es ist empfehlenswert alle Fachbegriffe als Anweisung zu deklarieren, damit diese einheitlich sind und zentral geändert werden können
 
@@ -41,7 +44,7 @@
 % Custom Anweisungen ------------------------------------------------------------------
 % Anweisung um mehrere PDF-Seiten einzufügen
 \newcommand\includepdfWithChapter[4]{%
-\includepdf[pages={#1}, pagecommand={\chapter{#3}}]{#4}
-\includepdf[pages={#2}]{#4}
+	\includepdf[pages={#1}, pagecommand={\chapter{#3}}]{#4}
+	\includepdf[pages={#2}]{#4}
 }
 

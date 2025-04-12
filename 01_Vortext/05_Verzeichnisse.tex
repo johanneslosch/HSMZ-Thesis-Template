@@ -15,19 +15,12 @@
 
 % Abkuerzungsverzeichnis ------------------------------------------------------------------
 
-\newcommand{\abksvz}{Abk"urzungsverzeichnis}
+\newcommand{\abksvz}{Abkürzungsverzeichnis}
 \chapter*{\abksvz}
 \addchaptertocentry{}{\abksvz}
 \input{01_Vortext/06_Abkuerzungen}
 
-% Symbolverzeichnis -----------------------------------------------------------------------
-\printnomenclature
-
-% Formelverzeichnis -----------------------------------------------------------------------
-\listofequations
-
-% Listingverzeichnis ----------------------------------------------------------------------
-\listoflistings
-
-% Algorithmenverzeichnis ------------------------------------------------------------------
-\listofalgorithms
+\renewcommand*{\glossaryname}{IT Glossar}
+\printglossary[type=main]
+\addchaptertocentry{}{\glossaryname}
+\input{01_Vortext/07_Abkuerzungen_IT.tex}

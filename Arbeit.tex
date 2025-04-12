@@ -1,35 +1,19 @@
-%-----------------------------------------------------------------------------------------
-%  Dieses Projekt wurde erstellt mit der LaTeX Vorlage von Jonas Bingel
-%  Die LaTeX Vorlage kann heruntergeladen werden unter: github.com/JonasBingel/HSMZ-Thesis-Template
-% -----------------------------------------------------------------------------------------
-
-% Erklärender Text zu dieser Datei --------------------------------------------------------
-% Die Datei Arbeit.tex ist die Hauptdatei, die dem LaTeX-Kompiler übergeben wird.
-% Diese Datei ist zu verwenden, wenn die eigentliche Haus/Bachelor/Masterarbeit erstellt werden soll.
-% In dieser Datei wird 
-%  - das Dokument erstellt und alle anderen tex-Dateien werden geladen.
-%  - die .bib-Datei eingebunden zur Bereitstellung der Quellen
-%  - die Struktur des Dokuments wird definiert
-% -----------------------------------------------------------------------------------------
-
 \documentclass[
 ngerman, % neue Deutsche Rechtschreibung
 headings=normal, % normale Headings
 captions=tableheading, % Positioniert Captions über Tabellen
 listof=totoc,
-bibliography=totoc,
-%usegeometry, % Auskommentieren wenn Package geometery verwendet wird
+%bibliography=totoc,
 overfullrule, % entfernen nach abschluss der bearbeitung
-% Default Values, die scrreprt nutzt
 %oneside, % Einseitige Seitengenerierung
-%11pt, % Font size
-% a4paper, % paper
+11pt, % Font size
+ a4paper, % paper
 ]{scrreprt}
-\KOMAoptions{%
-  DIV=12,
-  parskip=half*,
+%\KOMAoptions{%
+%  DIV=12,
+%  parskip=half*,
 % %BCOR=korrektur, % absoluter Wert der Bindekorrektur
-}
+%}
 
 \input{00_Allgemein/Metadaten}
 \input{00_Allgemein/Packages}
@@ -39,9 +23,7 @@ overfullrule, % entfernen nach abschluss der bearbeitung
 \widowpenalty=10000     % Hurenkinder
 \clubpenalty=10000      % Schusterjungen
 
-
-
-\addbibresource{sample.bib}
+%\addbibresource{sample.bib}
 % Wegen dem folgenden Befehl werden im Literaturverzeichnis alle Quellen gelistet, die in der .bib Datei enthalten sind. 
 % Wird der Befehl entfernt, werden nur die Quellen gelistet, die auch zitiert werden.
 % Der Befehl sollte bei Abgabe der Bachelorarbeit entfernt werden.
@@ -49,7 +31,6 @@ overfullrule, % entfernen nach abschluss der bearbeitung
 \newcounter{romanConsecutive}
 
 \begin{document}
-\include{00_Allgemein/ToDo}
 
 \pagestyle{empty}
 \renewcommand*{\chapterpagestyle}{empty}
@@ -71,7 +52,7 @@ overfullrule, % entfernen nach abschluss der bearbeitung
 \pagenumbering{Roman}
 
 \setcounter{page}{\value{romanConsecutive}}
-\printbibliography[title={Literaturverzeichnis}]
+%\printbibliography[title={Literaturverzeichnis}]
 \include{03_Nachtext/01_Anhang}
 
 \usestandardtocs

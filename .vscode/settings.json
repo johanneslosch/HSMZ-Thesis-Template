@@ -1,18 +1,40 @@
 {
+    "files.eol": "\n",
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
+    "github.copilot.enable": {
+        "latex": true
+    },
     "editor.wordWrap": "on",
     "files.autoSave": "onFocusChange",
-    "files.autoSaveDelay": 150000,
-    "github.copilot.enable": {
-        "latex": false
+    "files.autoSaveDelay": 150,
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.tex": "latex"
     },
     "latex-workshop.latex.recipes": [
-        { "name": "Build", "tools": ["XeTeX"] },
         {
-            "name": "Build (bib)",
-            "tools": ["XeTeX", "BibTeX", "XeTeX", "XeTeX"]
+            "name": "Build",
+            "tools": [
+                "XeTeX",
+                "makeglossaries-Arbeit",
+                "XeTeX",
+                "XeTeX"
+            ]
+        },
+        {
+            "name": "Build (full)",
+            "tools": [
+                "XeTeX",
+                "BibTeX",
+                "makeglossaries-Arbeit",
+                "XeTeX",
+                "XeTeX"
+            ]
         }
     ],
     "latex-workshop.latex.tools": [
@@ -30,14 +52,26 @@
         {
             "name": "BibTeX",
             "command": "bibtex",
-            "args": ["%DOCFILE%"]
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "glossaries-Arbeit",
+            "command": "makeglossaries Arbeit",
         }
     ],
-    "latex-workshop.latexindent.args": ["-w", "%DOCFILE%"],
-    "latex-workshop.latexindent.path": "latexindent",
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-y=defaultIndent: '%INDENT%'"
+    ],
     "latex-workshop.linting.run": "onType",
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-utilities.countWord.args": ["%DOCFILE%"],
+    "latex-utilities.countWord.args": [
+        "%DOCFILE%"
+    ],
     "latex-utilities.countWord.format": "${words} Words in Total, ${wordsBody} Words in Body",
     "latex-utilities.countWord.path": "texcount"
 }
