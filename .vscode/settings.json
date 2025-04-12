@@ -21,17 +21,8 @@
             "name": "Build",
             "tools": [
                 "XeTeX",
-                "makeglossaries-Arbeit",
-                "XeTeX",
-                "XeTeX"
-            ]
-        },
-        {
-            "name": "Build (full)",
-            "tools": [
-                "XeTeX",
+                "glossaries-Arbeit",
                 "BibTeX",
-                "makeglossaries-Arbeit",
                 "XeTeX",
                 "XeTeX"
             ]
@@ -58,7 +49,10 @@
         },
         {
             "name": "glossaries-Arbeit",
-            "command": "makeglossaries Arbeit",
+            "command": "makeglossaries",
+            "args": [
+                "%DOCFILE%"
+            ]
         }
     ],
     "latex-workshop.formatting.latexindent.args": [
